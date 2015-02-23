@@ -15,3 +15,4 @@
 /fulmar/log/*
 /fulmar!/log/.keep
 /fulmar/tmp
+/fulmar/tmp/*
