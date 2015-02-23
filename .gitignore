@@ -5,13 +5,13 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/fumar/.bundle
+/fulmar/.bundle
 
 # Ignore the default SQLite database.
-/fumar/db/*.sqlite3
-/fumar/db/*.sqlite3-journal
+/fulmar/db/*.sqlite3
+/fulmar/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/fumar/log/*
-/fumar!/log/.keep
-/fumar/tmp
+/fulmar/log/*
+/fulmar!/log/.keep
+/fulmar/tmp
