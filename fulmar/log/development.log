@@ -8,3 +8,152 @@ Migrating to CreatePeople (20150223231218)
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150223231218"]]
   [1m[35m (3.7ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 172.17.42.1 at 2015-02-23 23:20:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/codio/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 27ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 172.17.42.1 at 2015-02-23 23:20:57 +0000
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1243ms (Views: 1240.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/people-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 172.17.42.1 at 2015-02-23 23:20:58 +0000
+
+
+Started GET "/assets/people-46c9a194bd0668e67d57241f94473dc8.js?body=1" for 172.17.42.1 at 2015-02-23 23:20:58 +0000
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 172.17.42.1 at 2015-02-23 23:20:58 +0000
+
+
+Started GET "/assets/scaffolds-144428bd8f86bbac8ab8e6214253303e.css?body=1" for 172.17.42.1 at 2015-02-23 23:20:59 +0000
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 172.17.42.1 at 2015-02-23 23:20:59 +0000
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 172.17.42.1 at 2015-02-23 23:20:59 +0000
+
+
+Started GET "/assets/application-17f02e418e907b07f04f836a5c2d7912.css?body=1" for 172.17.42.1 at 2015-02-23 23:20:59 +0000
+
+
+Started GET "/assets/application-584e5ad092e1f250bb0d63bf12639a0e.js?body=1" for 172.17.42.1 at 2015-02-23 23:20:59 +0000
+
+
+Started GET "/people/new" for 172.17.42.1 at 2015-02-23 23:21:13 +0000
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (21.6ms)
+  Rendered people/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 132ms (Views: 126.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/people" for 172.17.42.1 at 2015-02-23 23:21:21 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vsEvAOiMsTNsptbAccJoTPdiuEQUnmA/MHc35ncEtF3M57lvOksBzmO7w7fWi6bu7DeiQAooqL/GqvtXBhTW3w==", "person"=>{"first_name"=>"Andrew", "last_name"=>"Duckworth"}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Andrew"], ["last_name", "Duckworth"], ["created_at", "2015-02-23 23:21:21.837108"], ["updated_at", "2015-02-23 23:21:21.837108"]]
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://mercy-cloud.codio.io:3000/people/1
+Completed 302 Found in 20ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/people/1" for 172.17.42.1 at 2015-02-23 23:21:22 +0000
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 172.17.42.1 at 2015-02-23 23:21:24 +0000
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people/new" for 172.17.42.1 at 2015-02-23 23:21:28 +0000
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (2.2ms)
+  Rendered people/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 73ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 172.17.42.1 at 2015-02-23 23:21:35 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U1bS4lW6nDCPug2A4GI/XaaVTWswwNCSj9oOwWtVzdUhcESNh30szYCnGPdHK/H/vcBXby52GBJ5B8JwGkWvVw==", "person"=>{"first_name"=>"Jim", "last_name"=>"Faketon"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "people" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Jim"], ["last_name", "Faketon"], ["created_at", "2015-02-23 23:21:35.373036"], ["updated_at", "2015-02-23 23:21:35.373036"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+Redirected to http://mercy-cloud.codio.io:3000/people/2
+Completed 302 Found in 9ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/people/2" for 172.17.42.1 at 2015-02-23 23:21:35 +0000
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPerson Load (0.1ms)[0m  [1mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered people/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people" for 172.17.42.1 at 2015-02-23 23:21:37 +0000
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people/new" for 172.17.42.1 at 2015-02-23 23:21:43 +0000
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (1.4ms)
+  Rendered people/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 172.17.42.1 at 2015-02-23 23:21:51 +0000
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cdp1nj8klNOx7N/MnoBtSg1r8sO4Uo7f0S4yEymjVPp7/OPx7eMkLr7xyrs5yaPoFj7ox6bkRl8n8/6iWLM2eA==", "person"=>{"first_name"=>"Sally", "last_name"=>"Incognito"}, "commit"=>"Create Person"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "people" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["first_name", "Sally"], ["last_name", "Incognito"], ["created_at", "2015-02-23 23:21:51.677381"], ["updated_at", "2015-02-23 23:21:51.677381"]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://mercy-cloud.codio.io:3000/people/3
+Completed 302 Found in 9ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/people/3" for 172.17.42.1 at 2015-02-23 23:21:51 +0000
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered people/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 172.17.42.1 at 2015-02-23 23:21:54 +0000
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people/1" for 172.17.42.1 at 2015-02-23 23:21:57 +0000
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.2ms)[0m  SELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered people/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 90ms (Views: 88.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 172.17.42.1 at 2015-02-23 23:21:59 +0000
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 0.3ms)
